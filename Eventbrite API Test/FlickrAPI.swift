@@ -68,9 +68,9 @@ struct FlickrAPI {
          //return flickrURL(method: .getPhotos, parameters: ["extras": "url_h,date_taken"])
         //if let australiaURL = NSURL(string: "https://www.flickr.com/photos/95526288@N06/sets/72157650847931154/")  {
             //return australiaURL
-        }
+        //}
         
-        return flickrURL(method: .RecentPhotos, parameters: ["extras": "url_h,date_taken"])
+        //return flickrURL(method: .RecentPhotos, parameters: ["extras": "url_h,date_taken"])
     }
     
     static func getURL() -> NSURL{
