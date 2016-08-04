@@ -26,6 +26,7 @@ enum FlickrError: ErrorType {
 struct FlickrAPI {
     private static let baseURLString = /*"https://api.flickr.com/services/rest"*/ "https://api.flickr.com/services/rest/?method=flickr.galleries.getPhotos&api_key=b5a9a14b1529748d4c8e301b10ebb042&gallery_id=72157670380338171&format=rest&auth_token=72157671772406106-6be63959e28970c9&api_sig=e188a532033cff7c9fb29cfc7c132e98"
     
+    
     private static let APIKey = /*"a6d819499131071f158fd740860a5a88"*/"2ec50c2435e7567b0f3d4ae7f9380a47"
     
     private static let dateFormatter: NSDateFormatter = {
@@ -64,8 +65,10 @@ struct FlickrAPI {
 
     static func recentPhotosURL() -> NSURL {
         
-        return flickrURL(method: .RecentPhotos, parameters: ["extras": "url_h,date_taken"])
-         //return flickrURL(method: .getPhotos, parameters: ["extras": "url_h,date_taken"])
+        /*if let photosURL = NSURL(string: baseURLString) {
+            return photosURL//flickrURL(method: .RecentPhotos, parameters: ["extras": "url_h,date_taken"])
+        }*/
+         return flickrURL(method: .RecentPhotos, parameters: ["extras": "url_h,date_taken"])
         //if let australiaURL = NSURL(string: "https://www.flickr.com/photos/95526288@N06/sets/72157650847931154/")  {
             //return australiaURL
         //}

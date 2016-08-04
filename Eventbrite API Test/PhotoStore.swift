@@ -24,7 +24,7 @@ class PhotoStore {
     
     func fetchRecentPhotos(completion completion: (PhotosResult) -> Void) {
         
-        let url = FlickrAPI.getURL()//FlickrAPI.recentPhotosURL()
+        let url = FlickrAPI.recentPhotosURL()//FlickrAPI.getURL()
         let request = NSURLRequest(URL: url)
         let task = session.dataTaskWithRequest(request) { (data, response, error) in
             let result = self.processRecentPhotosRequest(data: data, error: error)
